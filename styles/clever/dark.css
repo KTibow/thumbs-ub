@@ -1,0 +1,180 @@
+/*
+
+Treat this as a base dark styling sheet.
+The following should be checked as styled:
+- Login
+- Home page
+- Sidebar
+- Messages
+- Notification menu and profile dropdown
+- Search bar
+- Messages "settings" popup
+
+*/
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    hsl(220deg 78% 60%) 0%,
+    hsl(225deg 78% 60%) 50%,
+    hsl(230deg 77% 60%) 100%
+  );
+}
+::-webkit-scrollbar-track {
+  background: #333;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    hsl(220deg 78% 56%) 0%,
+    hsl(225deg 78% 56%) 50%,
+    hsl(230deg 77% 56%) 100%
+  );
+}
+::-webkit-scrollbar {
+  width: 1em;
+}
+/* Make background be dark */
+.Sidebar--container,
+.View--container,
+.AnnouncementsWhoosher,
+.Search--Input--isActive.Search--Input,
+.Search--noResults,
+.Search--ResultGroup,
+a.Search--Result,
+.ResourceLink,
+.Modal--window--content,
+.Modal--header,
+.content {
+  background: #222;
+  background-color: #222;
+}
+.ResourceLink:hover,
+.ResourceLink:focus {
+  background: #3d3e43;
+}
+/* Make links brighter */
+a.CategoryNav--link,
+a.Button--linkPlain,
+button.Button--linkPlain,
+.Menu--MenuItem--default:focus,
+a.Menu--MenuItem--default:focus,
+button.Menu--MenuItem--default:focus,
+button.Button--linkPlain:hover,
+a.Button--link:hover,
+a.Button--linkUnderlined:hover,
+a.Button--link,
+button.Button--link {
+  color: #5b82ff;
+}
+/* Make text brighter */
+body,
+.AlertBox--title,
+a.ResourceLink--link,
+span.WhoosherHeader--title,
+.NoAnnouncements--Text,
+.Search--Input--input,
+.Search--noResults,
+.Search--ResultGroup--heading,
+a.Search--Result,
+.Search--ResultContent--metadataContent,
+.MessageSettingsModal--Header,
+.MessageSettingsModal--Toggle--Text--Details,
+.AuthMethod--container,
+p {
+  color: #e6e4ec;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.MessagesPage--Header--Title,
+.Modal--header h1,
+.StudentChat--Header,
+.TopperMessage--SubtitleText {
+  color: #d4d7de;
+}
+/* Menus */
+.Menu--dropdown,
+.Menu--MenuItem--default,
+a.Menu--MenuItem--default,
+button.Menu--MenuItem--default {
+  background: #2e2e2e;
+  color: #e6e4ec;
+}
+/* Hover */
+button.Button--linkPlain:hover,
+a.Button--link:hover,
+a.Button--linkUnderlined:hover {
+  filter: brightness(1.1);
+}
+/* Search */
+.Search--ResultGroup--heading {
+  background: #2e2e2e;
+}
+/* Messages */
+.MessagingBubble--Message--Other,
+.TextArea,
+.MessagingInput--TextField .TextArea--input {
+  background: #3d3e43;
+  color: #e6e4ec;
+  border: none;
+}
+.MessagingBubble--Message--Own {
+  background: #d3d6de;
+  color: #000;
+}
+.ThreadHistory--Divider,
+.MessageMetadata--Timestamp--right,
+.MessageMetadata--Timestamp--left,
+.MessagingInput--TextFieldLabel {
+  color: #bdc0cc;
+}
+a.Button[disabled],
+button.Button[disabled],
+a.Button[disabled]:hover,
+button.Button[disabled]:hover,
+a.Button[disabled]:focus a.Button[disabled]:active,
+a.Button[disabled]:focus button.Button[disabled]:active,
+button.Button[disabled]:focus a.Button[disabled]:active,
+button.Button[disabled]:focus button.Button[disabled]:active {
+  background: coral;
+  color: white;
+  border: none;
+}
+.ThreadListItem,
+.ThreadListItem--Timestamp {
+  color: white !important;
+}
+.ThreadListItem--selected {
+  background: #3d3e43;
+}
+.MessagesPage--Header--Settings--Icon {
+  filter: brightness(1.5);
+}
+/* Close buttons */
+:is(button[aria-label="Close"], .Modal--close) path {
+  fill: white;
+}
+/* Login fixing */
+.content,
+.AuthMethod--separator,
+.PageContent .PageContent--sidebar {
+  border-color: #3a3a3a;
+}
+.AuthMethod--container,
+.BadgeLoginButton--largeContainer {
+  box-shadow: 0 0 0.25rem #464c59;
+}
+.AuthMethod--container:hover,
+.BadgeLoginButton--largeContainer:hover {
+  box-shadow: 0 0 0.25rem #5c6475;
+}
+.AuthMethod--container::after,
+.BadgeLoginButton--largeContainer::after {
+  display: none;
+}
+.BadgeLoginButton--largeImage {
+  filter: invert(1) hue-rotate(180deg);
+}

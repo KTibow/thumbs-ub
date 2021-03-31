@@ -1,0 +1,15 @@
+body {
+  background: #26282c;
+  color: white;
+  --shadow: -5.25px -5.25px 5.25px 0 rgba(55, 55, 55, 0.6),
+    5.25px 5.25px 5.25px 0 rgba(0, 0, 0, 0.15);
+  --inset-shadow: inset -5.25px -5.25px 5.25px 0 rgba(55, 55, 55, 0.6),
+    inset 5.25px 5.25px 5.25px 0 rgba(0, 0, 0, 0.15);
+}
+button,
+input {
+  color: white;
+}
+::placeholder {
+  color: #ccc;
+}

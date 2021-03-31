@@ -1,0 +1,17 @@
+/* General stuff */
+body {
+  --bg: #26282c;
+  --text: #eee;
+  --color: #809dff;
+  --shadow: -5.25px -5.25px 5.25px 0 rgba(55, 55, 55, 0.6),
+    5.25px 5.25px 5.25px 0 rgba(0, 0, 0, 0.15);
+  --in-shadow: inset -5.25px -5.25px 5.25px 0 rgba(55, 55, 55, 0.6),
+    inset 5.25px 5.25px 5.25px 0 rgba(0, 0, 0, 0.15);
+}
+.BadgeLoginButton--largeImage {
+  filter: invert(1) hue-rotate(180deg);
+}
+img.StudentTopBar--portalIcon,
+.StudentTopBar--messagingIcon {
+  filter: unset;
+}

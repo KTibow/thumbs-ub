@@ -1,0 +1,4 @@
+- statistics (like sites styled, video.links fixed)
+- more styling (schoology, and more types)
+- icon replacement
+fix video.link

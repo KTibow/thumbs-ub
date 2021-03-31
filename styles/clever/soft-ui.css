@@ -1,0 +1,228 @@
+/* General stuff */
+body {
+  --bg: #f0f2f5;
+  --text: #111;
+  --color: #3965e6;
+  --shadow: -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, 0.5),
+    5.5px 5.5px 5.5px 0 rgba(0, 0, 0, 0.03);
+  --in-shadow: inset -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, 0.5),
+    inset 5.5px 5.5px 5.5px 0 rgba(0, 0, 0, 0.03);
+}
+body,
+.ResourceLink,
+.Sidebar--container,
+.AlertBox--info,
+.Whoosher,
+.Modal--window,
+.Modal--window > *,
+.MessageSettingsModal--Modal h1,
+.MessageSettingsModal--Header,
+.MessageSettingsModal--Toggle--Text--Details,
+.content {
+  background: var(--bg);
+  color: var(--text);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.AlertBox--title,
+a.ResourceLink--link,
+.AnnouncementsWhoosher--Header,
+.NoAnnouncements--Text,
+.MessagesPage--Header--Title,
+.StudentChat--Header,
+.TopperMessage--SubtitleText,
+.MessageMetadata--Timestamp--left,
+.MessageMetadata--Timestamp--right,
+.MessagingInput--TextFieldLabel,
+p {
+  color: var(--text);
+}
+a:not(:is(.ResourceLink--link, .CategoryNav--link)),
+a.Button--linkPlain,
+button.Button--linkPlain {
+  color: var(--color) !important;
+  border-color: var(--color) !important;
+}
+.Footer {
+  border-color: var(--color) !important;
+}
+/* Scrollbar */
+::-webkit-scrollbar-track {
+  box-shadow: var(--shadow);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+  box-shadow: var(--in-shadow);
+  border-radius: 1em;
+  border: transparent solid 15px;
+  border-right-width: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+  border-right-width: 15px;
+}
+::-webkit-scrollbar {
+  width: calc(1em + 30px);
+}
+/* Home page */
+.ResourceLink {
+  box-shadow: var(--shadow);
+  vertical-align: top;
+  margin: 25px;
+}
+.ResourceLink:hover {
+  box-shadow: var(--in-shadow);
+}
+.mq-hover .ResourceLink::after {
+  display: none;
+}
+.AlertBox--info {
+  box-shadow: var(--shadow);
+  border: none;
+}
+:is(.AlertBox--close, button[aria-label^="close"]) path {
+  fill: var(--text);
+}
+a.CategoryNav--link {
+  color: var(--color);
+}
+a.CategoryNav--link:active,
+a.CategoryNav--link:focus,
+a.CategoryNav--link:hover {
+  border-color: var(--color);
+  color: var(--color);
+  filter: brightness(1.16);
+}
+/* Header stuff */
+.WhoosherHeader--button:hover,
+button.WhoosherHeader--button:hover,
+.WhoosherHeader--button:focus,
+button.WhoosherHeader--button:focus {
+  outline: unset;
+}
+path.dewey--Logo--text {
+  fill: var(--text);
+}
+.dewey--TopBar--title {
+  color: var(--text);
+}
+.StudentTopBar--topBar {
+  /* ^ Redundancy at its finest. */
+  background: var(--bg);
+  box-shadow: none;
+}
+.TopBarButton:focus,
+.TopBarButton:hover {
+  background: transparent;
+  color: var(--color);
+}
+.TopBarButton {
+  color: var(--text);
+}
+.TopBarButton--activeIndicator {
+  left: calc((100% - (1em * 2.625) - 15px) / 2);
+  right: calc((100% - (1em * 2.625) - 15px) / 2);
+  top: calc((100% - 1.625rem - 31px) / 2);
+  bottom: calc((100% - 1.625rem - 31px) / 2);
+  height: unset;
+  background: transparent;
+  box-shadow: var(--in-shadow);
+}
+.StudentTopBar--portalIcon,
+.StudentTopBar--messagingIcon {
+  filter: invert(1);
+}
+.Search--Input {
+  background-color: transparent !important;
+  box-shadow: var(--in-shadow);
+}
+.Search--Input--icon,
+.Search--Input--input {
+  color: var(--text) !important;
+}
+.Search--Input--input::placeholder {
+  color: var(--text);
+  filter: brightness(0.66);
+}
+/* Messages */
+.MessagesPage--Header--Container,
+.MessagesPage--Sidebar--Container {
+  border-color: var(--color);
+}
+.MessagesPage--Header--Settings--Icon {
+  filter: brightness(1.5);
+}
+.MessagingInput--TextField {
+  background: var(--bg);
+  box-shadow: var(--in-shadow);
+  border: none;
+}
+.MessagingBubble--Message--Other,
+.MessagingBubble--Message--Own {
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.ThreadListItem,
+.ThreadListItem--Timestamp,
+.ThreadListItem--Timestamp--selected,
+.ThreadHistory--Divider,
+.TopperMessage--TitleText {
+  color: var(--text);
+}
+.ThreadListItem--selected,
+.List--Item--ContentWrapperClickable:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* Menu */
+.Menu--dropdown {
+  background-color: rgba(128, 128, 128, 0.1) !important;
+  border-color: var(--color);
+}
+.Menu--MenuItem--default, a.Menu--MenuItem--default, button.Menu--MenuItem--default {
+  background-color: transparent;
+  color: var(--text);
+}
+.Menu--MenuItem--default:focus, a.Menu--MenuItem--default:focus, button.Menu--MenuItem--default:focus {
+  background: rgba(128, 128, 128, 0.1);
+  color: var(--color);
+  filter: brightness(1.2);
+}
+/* Modals */
+button.Button--link {
+  color: var(--color);
+}
+button.Button--link:hover {
+  filter: brightness(1.2);
+}
+/* Login */
+.content,
+.PageContent .PageContent--sidebar,
+.AuthMethod--separator {
+  border: none;
+}
+.AuthMethod--container,
+.BadgeLoginButton--largeContainer {
+  box-shadow: var(--shadow);
+}
+.AuthMethod--container:hover,
+.BadgeLoginButton--largeContainer:hover {
+  box-shadow: var(--in-shadow);
+}
+.AuthMethod--container::after,
+.BadgeLoginButton--largeContainer::after {
+  display: none;
+}
+a[aria-label="Clever Badge log in"] {
+  color: var(--text) !important;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border: none;
+}
+a[aria-label="Clever Badge log in"]:hover {
+  background: var(--bg);
+  box-shadow: var(--in-shadow);
+}

@@ -1,0 +1,189 @@
+/*
+
+Things to test:
+- Login page
+- All items in sidebar (try out grade and course request)
+- Shadows, dropdowns, and buttons
+
+*/
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff2;
+}
+::-webkit-scrollbar-track {
+  background: #fff1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff17;
+}
+::-webkit-scrollbar {
+  width: 1em;
+}
+/* Login page and general stuff */
+body {
+  background-color: #2c5a81;
+  color: white;
+}
+#LoginHeading,
+#LoginPVUE,
+#LoginSVUE,
+#DistrictName,
+#Greeting,
+.oen-nav-header,
+body .container > h1 {
+  color: #fff !important;
+}
+.panel,
+.panel-default > .panel-heading,
+.panel-default > .panel-footer,
+.panel-default > .panel-footer a,
+.modal-content {
+  background: #222;
+  color: #fff;
+}
+/* Links */
+a,
+a:hover,
+a:focus {
+  color: cornflowerblue !important;
+}
+a:hover,
+a:focus {
+  filter: brightness(1.3);
+}
+/* Icons */
+i.fa.fa-apple {
+  color: #ddd !important;
+}
+i.fa.fa-android {
+  color: #3ddc84 !important;
+}
+i.fa.fa-link,
+.login-more .more-options > ul > li > .pxp-login-more-link {
+  color: cornflowerblue !important;
+}
+/* UI elements */
+.btn-default,
+.dropdown-menu,
+.login-more .btn-more {
+  background: #444;
+  color: white;
+}
+.languagesDropDown .dropdown-menu ul > li[data-selected="True"],
+.languagesDropDown .dropdown-menu ul > li:hover,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  background: #595959;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: white;
+}
+input:is([type="text"], [type="password"]) {
+  /* Thanks Kevin Powell */
+  filter: invert(1) hue-rotate(180deg) saturate(1.5); /* Just for autofill */
+}
+/* Border fixing galore */
+.login-more > .expander,
+.btn,
+.panel,
+.panel-default > .panel-heading,
+.panel-default > .panel-footer,
+.pxp-student-summary,
+.pxp-student-header,
+#maincontent,
+#mainnav > .pxp-left-nav .list-group-item,
+.dx-datagrid-headers .dx-datagrid-table .dx-row > td,
+.ocr-selection-period {
+  border-color: #444 !important;
+}
+/* Home page */
+#maincontent,
+.pxp-student-header,
+#mainnav > .pxp-left-nav .list-group-item.active,
+#mainnav > .pxp-left-nav .list-group-item.active:hover,
+#mainnav > .pxp-left-nav .list-group-item.active:focus,
+#mainnav > .pxp-left-nav a.list-group-item.active,
+#mainnav > .pxp-left-nav a.list-group-item.active:hover,
+#mainnav > .pxp-left-nav a.list-group-item.active:focus,
+#mainnav > .pxp-left-nav a.list-group-item {
+  background: #222;
+}
+.pxp-student-summary {
+  background: #333;
+  box-shadow: 2px 2px rgb(192 192 192 / 50%);
+}
+.pxp-student-summary h2 {
+  color: white;
+}
+.pxp-navbar li:hover a,
+.pxp-navbar li a:hover {
+  background: #6542ff3d;
+}
+/* Documents */
+.dx-datagrid {
+  background: #333;
+  color: white;
+}
+/* Table (found in School Information) */
+.dx-datagrid .dx-row-alt > td,
+.dx-datagrid .dx-row-alt > tr > td {
+  background: #444;
+}
+/* Headers (found in Grade Book) */
+#maincontent h2,
+#gb-classes .pres-table.table > div > .gb-class-row:not(.details) {
+  background: #333;
+  color: white;
+}
+/* Info (found in Course Request) */
+.alert-info {
+  background: #0c2b3b;
+  border-color: #124954;
+  color: #6faece;
+}
+/* Some other alert thingy (found in Course Request) */
+.ocr-selection-period {
+  background: #3b330c;
+}
+.crs-req-info .ocr-school {
+  color: indianred;
+}
+/* List (found in Class Schedule and Calendar) */
+.list-group-item,
+.list-group > .separator {
+  background: #333;
+}
+/* Calendar (found in Attendance) */
+.calendar-sm td.disabled,
+.cal-filter-panel {
+  background: #333;
+}
+.calendar-sm td.today {
+  background: #47f6;
+}
+/* Popup (found in attendance) */
+#attendance-root > .attendance-details,
+#attendance-root
+  > .attendance-details
+  .school-detail
+  thead[data-term-name]
+  > tr
+  > th,
+.table,
+.table .table,
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background: #222;
+}
+/* Messages (found in Messages) */
+table#PXPMessages tr[id]:hover {
+  background: #333;
+}

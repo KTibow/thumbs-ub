@@ -1,0 +1,12 @@
+body {
+  background: black;
+  color: white;
+}
+button,
+input {
+  background: #444;
+  color: white;
+}
+::placeholder {
+  color: #ccc;
+}

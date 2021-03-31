@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings</title>
+    <style>
+      select,
+      button {
+        display: block;
+        margin: 8px 0;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        margin: 10px 5px;
+      }
+    </style>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>Options</h1>
+    <h2>Better UI:</h2>
+    <label
+      ><input type="radio" value="disabled" name="style" checked />
+      Nothing</label
+    >
+    <label><input type="radio" value="soft-ui" name="style" /> Soft UI</label>
+    <label
+      ><input type="radio" value="glass" name="style" /> Glassmorphism</label
+    >
+    <label
+      ><h2>Night mode:</h2>
+      <input type="checkbox" id="dark"
+    /></label>
+    <label
+      ><h2>Change video.link videos to YouTube videos:</h2>
+      <input type="checkbox" id="videolink"
+    /></label>
+    <label
+      ><h2>
+        Google account email (for auto-login to Zoom + Schoology + Flipgrid in
+        Google):&nbsp;
+      </h2>
+      <input type="text" id="email" placeholder="Leave empty to disable"
+    /></label>
+    <button id="save" style="cursor: pointer">Save</button>
+    <label
+      ><h2>Tool used while coding the better UI:&nbsp;</h2>
+      <button id="updateStyles" style="cursor: pointer">
+        Update styles on styled pages
+      </button></label
+    >
+    <label
+      ><h2>Give me feedback:&nbsp;</h2>
+      <button id="googleFormLink" style="cursor: pointer">
+        Open Google form
+      </button></label
+    >
+    <script src="js/options.js"></script>
+  </body>
+</html>

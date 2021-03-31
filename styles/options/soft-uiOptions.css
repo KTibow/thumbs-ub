@@ -1,0 +1,43 @@
+body {
+  background: #f3f5f7;
+  --shadow: -5.5px -5.5px 5.5px 0 rgb(255 255 255 / 50%),
+    5.5px 5.5px 5.5px 0 rgb(0 0 0 / 3%);
+  --inset-shadow: inset -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, 0.5),
+    inset 5.5px 5.5px 5.5px 0 rgba(0, 0, 0, 0.03);
+}
+label {
+  margin: 10px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  appearance: none;
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+  box-shadow: var(--inset-shadow);
+}
+input[type="text"] {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  background: transparent;
+  box-shadow: var(--shadow);
+}
+input[type="text"]:focus {
+  box-shadow: var(--inset-shadow);
+}
+button {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  box-shadow: var(--shadow);
+}
