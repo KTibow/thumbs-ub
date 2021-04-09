@@ -19,24 +19,25 @@ const loadStyle = (items) => {
     .replace(".com", "")
     .split(".")
     .slice(-1);
-  if (flavor == "") {
-    theStyle.innerHTML = "";
-    return;
+  theStyle.innerHTML = "";
+  if (flavor != "") {
+    var styleURL = `styles/${websiteName}/${flavor}.css`;
+    console.log("Loading style at", styleURL);
+    fetch(chrome.extension.getURL(styleURL))
+      .then((response) => {
+        return response.text();
+      })
+      .then((text) => {
+        theStyle.innerHTML += text;
+        console.log(
+          "Finished loading",
+          styleURL,
+          "at",
+          new Date(),
+          new Date().getMilliseconds()
+        );
+      });
   }
-  var styleURL = `styles/${websiteName}/${flavor}.css`;
-  console.log("Loading style at", styleURL);
-  fetch(chrome.extension.getURL(styleURL))
-    .then((response) => {
-      return response.text();
-    })
-    .then((text) => {
-      theStyle.innerHTML += text;
-      console.log(
-        "Finished loading at ",
-        new Date(),
-        new Date().getMilliseconds()
-      );
-    });
   if (items.darkMode) {
     styleURL = `styles/${websiteName}/${flavor}Dark.css`;
     fetch(chrome.extension.getURL(styleURL))
@@ -46,7 +47,9 @@ const loadStyle = (items) => {
       .then((text) => {
         theStyle.innerHTML += text;
         console.log(
-          "Finished loading at ",
+          "Finished loading",
+          styleURL,
+          "at",
           new Date(),
           new Date().getMilliseconds()
         );
