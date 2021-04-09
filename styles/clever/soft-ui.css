@@ -182,11 +182,15 @@ path.dewey--Logo--text {
   background-color: rgba(128, 128, 128, 0.1) !important;
   border-color: var(--color);
 }
-.Menu--MenuItem--default, a.Menu--MenuItem--default, button.Menu--MenuItem--default {
+.Menu--MenuItem--default,
+a.Menu--MenuItem--default,
+button.Menu--MenuItem--default {
   background-color: transparent;
   color: var(--text);
 }
-.Menu--MenuItem--default:focus, a.Menu--MenuItem--default:focus, button.Menu--MenuItem--default:focus {
+.Menu--MenuItem--default:focus,
+a.Menu--MenuItem--default:focus,
+button.Menu--MenuItem--default:focus {
   background: rgba(128, 128, 128, 0.1);
   color: var(--color);
   filter: brightness(1.2);
