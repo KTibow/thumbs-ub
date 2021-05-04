@@ -8,8 +8,10 @@ theStyle.id = "👍";
 const addStyleAndRetry = () => {
   if (document.body) {
     document.body.appendChild(theStyle);
+    console.log("Style tag injected.");
   } else {
-    setTimeout(addStyleAndRetry, 10); // Account for slow loading
+    console.log("Not loaded yet.");
+    setTimeout(addStyleAndRetry, 25); // Account for slow loading
   }
 };
 addStyleAndRetry();
@@ -19,6 +21,7 @@ const loadStyle = (items) => {
     .replace(".com", "")
     .split(".")
     .slice(-1);
+  window.mainStyleLoaded = false;
   theStyle.innerHTML = "";
   if (flavor != "") {
     var styleURL = `styles/${websiteName}/${flavor}.css`;
@@ -29,6 +32,7 @@ const loadStyle = (items) => {
       })
       .then((text) => {
         theStyle.innerHTML += text;
+        window.mainStyleLoaded = true;
         console.log(
           "Finished loading",
           styleURL,
@@ -39,16 +43,18 @@ const loadStyle = (items) => {
       });
   }
   if (items.darkMode) {
-    styleURL = `styles/${websiteName}/${flavor}Dark.css`;
-    fetch(chrome.extension.getURL(styleURL))
+    var darkStyleURL = `styles/${websiteName}/${flavor}Dark.css`;
+    console.log("Loading dark style at", darkStyleURL);
+    fetch(chrome.extension.getURL(darkStyleURL))
       .then((response) => {
         return response.text();
       })
       .then((text) => {
+        while (flavor != "" && !window.mainStyleLoaded);
         theStyle.innerHTML += text;
         console.log(
           "Finished loading",
-          styleURL,
+          darkStyleURL,
           "at",
           new Date(),
           new Date().getMilliseconds()

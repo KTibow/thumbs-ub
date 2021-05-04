@@ -12,7 +12,9 @@ chrome.storage.sync.get(
   {
     changeVideoLinks: true,
   },
-  () => {
-    window.intervalId = setInterval(goToYoutube, 100);
+  (items) => {
+    if (items.changeVideoLinks) {
+      window.intervalId = setInterval(goToYoutube, 100);
+    }
   }
 );
