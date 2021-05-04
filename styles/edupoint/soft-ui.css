@@ -1,0 +1,114 @@
+/* General stuff */
+body {
+  --bg: #f0f2f5;
+  --text: #111;
+  --color: #3965e6;
+  --shadow: -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, 0.5),
+    5.5px 5.5px 5.5px 0 rgba(0, 0, 0, 0.03);
+  --in-shadow: inset -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, 0.5),
+    inset 5.5px 5.5px 5.5px 0 rgba(0, 0, 0, 0.03);
+  --white-image-filter: invert(1);
+  --dark-image-filter: unset;
+}
+* {
+  border: none !important;
+}
+body,
+.panel,
+footer.footer,
+input,
+.form-control,
+.btn-default,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.panel-default > .panel-heading,
+.panel-default > .panel-footer,
+.panel-default > .panel-footer a,
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary[disabled],
+.open .dropdown-toggle.btn-primary {
+  background: var(--bg);
+  color: var(--text);
+}
+#LoginHeading,
+#LoginPVUE,
+#LoginSVUE, 
+#DistrictName,
+#Greeting,
+.oen-nav-header,
+body .container > h1,
+.footer a:hover,
+.footer a:active,
+.footer a,
+.footer #legal {
+  color: var(--text) !important;
+}
+body h1 {
+  border: none;
+}
+img[src="Images/ST_Revelation/EduPointLogo_WHITE.png"] {
+  filter: var(--white-image-filter);
+}
+:is(
+  input,
+  input:focus
+):is(
+  [type="text"],
+  [type="password"]
+) {
+  box-shadow: var(--in-shadow);
+  height: 3em;
+  margin: 20px 0;
+  padding: 10px;
+}
+input:is(:-webkit-autofill, :-webkit-autofill:focus) {
+  box-shadow: none;
+  filter: hue-rotate(180deg);
+}
+input[type="submit"] {
+  box-shadow: var(--shadow);
+}
+/* Login page */
+.panel {
+  box-shadow: var(--shadow);
+}
+.equal,
+.equal > div[class*='col-'] {
+  margin: 20px;
+}
+.login-more :is(.btn-more, .btn-more:hover) {
+  box-shadow: var(--shadow);
+  background: var(--bg);
+  color: var(--text);
+}
+.login-more .btn-more:hover {
+  box-shadow: var(--in-shadow);
+}
+i.fa.fa-apple {
+  color: #888 !important;
+}
+i.fa.fa-android {
+  color: #3ddc84 !important;
+}
+i.fa.fa-lock {
+  color: tomato !important;
+}
+i.fa.fa-link,
+.login-more .more-options > ul > li > .pxp-login-more-link {
+  color: cornflowerblue !important;
+}
+/* Dropdowns */
+.btn-default.dropdown-toggle {
+  box-shadow: var(--shadow);
+}
+.dropup.open .btn-default.dropdown-toggle {
+  background-color: var(--bg);
+  color: var(--text);
+  box-shadow: var(--in-shadow);
+}
