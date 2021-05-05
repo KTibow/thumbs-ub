@@ -112,3 +112,41 @@ i.fa.fa-link,
   color: var(--text);
   box-shadow: var(--in-shadow);
 }
+.dropdown-menu {
+  background-color: var(--bg);
+  box-shadow: none;
+}
+.languagesDropDown .dropdown-menu ul > li[data-selected=True],
+.languagesDropDown .dropdown-menu ul > li:hover {
+  background-color: transparent;
+  backdrop-filter: contrast(0.8);
+}
+/* Main page */
+.pxp-student-header {
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  margin-top: 25px;
+  padding: 10px;
+}
+.pxp-navbar a,
+.pxp-navbar li:hover a,
+.pxp-navbar li a:hover {
+  background-color: var(--bg);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  margin: 0 5px;
+}
+.pxp-navbar li:hover a,
+.pxp-navbar li a:hover {
+  box-shadow: var(--in-shadow);
+}
+#maincontent {
+  background: var(--bg);
+}
+.pxp-student-summary {
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+.pxp-student-summary h2 {
+  color: var(--text);
+}
