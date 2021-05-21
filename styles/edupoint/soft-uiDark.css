@@ -1,6 +1,7 @@
 /* General stuff */
 body {
   --bg: #26282c;
+  --alt-bg: #323439;
   --text: #eee;
   --color: #809dff;
   --shadow: -5.25px -5.25px 5.25px 0 rgba(55, 55, 55, 0.6),

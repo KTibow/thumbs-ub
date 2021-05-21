@@ -169,6 +169,9 @@ input:is([type="text"], [type="password"]) {
 .calendar-sm td.today {
   background: #47f6;
 }
+.cal-filter-panel .cal-month-table td[data-events] {
+  background: #333;
+}
 /* Popup (found in attendance) */
 #attendance-root > .attendance-details,
 #attendance-root

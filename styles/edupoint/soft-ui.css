@@ -1,6 +1,7 @@
 /* General stuff */
 body {
   --bg: #f0f2f5;
+  --alt-bg: #e0e4eb;
   --text: #111;
   --color: #3965e6;
   --shadow: -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, 0.5),
@@ -38,7 +39,7 @@ input,
 }
 #LoginHeading,
 #LoginPVUE,
-#LoginSVUE, 
+#LoginSVUE,
 #DistrictName,
 #Greeting,
 .oen-nav-header,
@@ -55,13 +56,7 @@ body h1 {
 img[src="Images/ST_Revelation/EduPointLogo_WHITE.png"] {
   filter: var(--white-image-filter);
 }
-:is(
-  input,
-  input:focus
-):is(
-  [type="text"],
-  [type="password"]
-) {
+:is(input, input:focus):is([type="text"], [type="password"]) {
   box-shadow: var(--in-shadow);
   height: 3em;
   margin: 20px 0;
@@ -79,7 +74,7 @@ input[type="submit"] {
   box-shadow: var(--shadow);
 }
 .equal,
-.equal > div[class*='col-'] {
+.equal > div[class*="col-"] {
   margin: 20px;
 }
 .login-more :is(.btn-more, .btn-more:hover) {
@@ -116,7 +111,7 @@ i.fa.fa-link,
   background-color: var(--bg);
   box-shadow: none;
 }
-.languagesDropDown .dropdown-menu ul > li[data-selected=True],
+.languagesDropDown .dropdown-menu ul > li[data-selected="True"],
 .languagesDropDown .dropdown-menu ul > li:hover {
   background-color: transparent;
   backdrop-filter: contrast(0.8);
@@ -149,4 +144,88 @@ i.fa.fa-link,
 }
 .pxp-student-summary h2 {
   color: var(--text);
+}
+/* Navbars */
+#mainnav > .pxp-left-nav :is(.list-group-item, a.list-group-item) {
+  color: var(--text);
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  margin: 15px 0;
+}
+#mainnav > .pxp-left-nav :is(.list-group-item, a.list-group-item):is(.active, :hover, .active:hover /* specificity wars */) {
+  color: var(--text);
+  background: var(--bg);
+  box-shadow: var(--in-shadow);
+}
+/* Tables (found in My Account, School Info, Messages, Gradebook) */
+.dx-datagrid {
+  background: var(--bg);
+  color: var(--text);
+}
+.dx-datagrid .dx-row-alt > td,
+.dx-datagrid .dx-row-alt > tr > td {
+  background: var(--alt-bg);
+}
+table#PXPMessages tr[id] {
+  box-shadow: var(--shadow);
+  margin: 10px 0;
+}
+table#PXPMessages tr[id]:hover {
+  box-shadow: var(--in-shadow);
+  background: var(--bg);
+}
+table#PXPMessages {
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+.DisabledCell {
+  background-color: var(--alt-bg) !important;
+}
+.RCHeader {
+  background-color: #3850c733 !important;
+}
+.dx-datagrid-table .dx-editor-cell .dx-texteditor,
+.dx-datagrid-table .dx-editor-cell .dx-texteditor input {
+  background: transparent;
+}
+/* Modals (found in Messages) */
+.modal-content {
+  background: var(--bg);
+}
+:is(.modal-header, .modal-footer) button {
+  box-shadow: var(--shadow);
+}
+.contact-box-primary {
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+/* Calendar */
+#maincontent h2 {
+  background: transparent;
+  color: var(--text);
+}
+.list-group-item,
+.cal-filter-panel {
+  background: var(--alt-bg);
+}
+.cal-filter-panel .cal-month-table td[data-events] {
+  background: var(--bg);
+}
+td.day.disabled {
+  background: var(--alt-bg);
+}
+td.day.today {
+  background: #0a9bf549;
+}
+/* Course requests */
+.alert,
+.ocr-selection-period {
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+/* Gradebook */
+#gb-classes .pres-table.table > div > .gb-class-row:not(.details) {
+  background-color: var(--bg);
 }
