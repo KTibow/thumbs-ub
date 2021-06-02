@@ -41,6 +41,11 @@
     {
       "matches": ["https://www.corefocusonmath.com/*"],
       "js": ["js/contentScripts/corefocusonmath.com.js"]
+    },
+    {
+      "matches": ["https://login.i-ready.com/student/dashboard/diagnosticIFrame/ela"],
+      "js": ["js/contentScripts/i-ready.com.js"],
+      "all_frames": true
     }
   ],
   "web_accessible_resources": ["*.css"],
